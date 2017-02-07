@@ -1,0 +1,12 @@
+<Window 
+    x:Class="NSTest.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NSTest"
+    Title="Window2" Height="300" Width="300">
+    <StackPanel>
+        <local:CustomeElement x:Name="customElement"   />
+        <Button Content="ReWrite Text" Click="OnReWrite" Width="120" Height="30" />
+        <Button Content="Erase Text" Click="OnErase" Width="120" Height="30" />
+    </StackPanel>
+</Window>

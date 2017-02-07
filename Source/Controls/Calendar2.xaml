@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="NSTest.Calendar2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NSTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel  LastChildFill="True" >
+        <StackPanel DockPanel.Dock="top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Height="24" >
+                <Button Width="20" Click="decreaseMonth" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/WPFManualDrawing;component/art/leftArrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Label Content="{Binding monthName}" Width="70" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button Width="20" Click="increaseMonth">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/WPFManualDrawing;component/art/rightArrow.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <Label Width="20"/>
+            <StackPanel Orientation="Horizontal" Height="24" >
+                <Label Content="{Binding year}" Width="70"/>
+                <StackPanel >
+                    <Button Width="20" Height="12" Click="decreaseYear">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/WPFManualDrawing;component/art/upArrow.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Width="20" Height="12" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/WPFManualDrawing;component/art/downArrow.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+        <local:ColtCalendarView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BackColor="Pink"/>
+        <!--
+        <TextBox Text="Block." HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        -->
+    </DockPanel>
+</UserControl>
+    

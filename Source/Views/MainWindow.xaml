@@ -1,0 +1,18 @@
+<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:NSTest"
+	x:Name="window1"
+	x:Class="NSTest.MainWindow"
+	Title="MainWindow"
+   
+    >
+    <Window.Resources/>
+
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <DataGrid x:Name="dgRequests" ItemsSource="{Binding Source={StaticResource ToolRoomRequestProvider}}" PreviewMouseLeftButtonDown="dgRequests_PreviewMouseLeftButtonDown" PreviewMouseMove="dgRequests_PreviewMouseMove" PreviewMouseLeftButtonUp="dgRequests_PreviewMouseLeftButtonUp" MouseLeftButtonUp= "dgRequests_MouseLeftButtonUp" SelectionMode="Single" GiveFeedback="dgRequests_GiveFeedback"/>
+        <local:ColtCalendarView  x:Name="ccvRequests" AllowDrop="True" DragEnter="ccvRequests_DragEnter"   Drop="ccvRequests_Drop" MouseLeftButtonUp="ccvRequests_MouseLeftButtonUp" PreviewMouseLeftButtonUp="ccvRequests_PreviewMouseLeftButtonUp" GiveFeedback="ccvRequests_GiveFeedback"/>
+        <Button x:Name="btnTest" Click="btnTest_Click" Height="24" Content="Test"/>
+    </StackPanel>
+</Window>

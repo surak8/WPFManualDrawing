@@ -1,0 +1,26 @@
+<Application xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:NSTest"
+	x:Class="NSTest.Application"
+	StartupUri="/Source/Views/MainWindow.xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<Application.Resources>
+        <FontFamily x:Key="DefaultFont">Courier New</FontFamily>
+        
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}"/>
+        </Style>
+
+        <Style TargetType="{x:Type Window}">
+            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}"/>
+        </Style>
+
+        <Style TargetType="{x:Type Control}">
+            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}"/>
+        </Style>
+
+        <ObjectDataProvider x:Key="ToolRoomRequestProvider" ObjectType="{x:Type local:ToolRoomRequest}" MethodName="requests"/>
+        <ObjectDataProvider x:Key="ToolMakersProvider" ObjectType="{x:Type local:Toolmaker}" MethodName="toolMakers"/>
+
+    </Application.Resources>
+</Application>
